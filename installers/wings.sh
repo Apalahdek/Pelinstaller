@@ -116,9 +116,9 @@ ptdl_dl() {
   echo "* Downloading Pelican Wings.. "
 
   mkdir -p /etc/pelican
-  curl -L -o /usr/local/bin/wings "$WINGS_DL_BASE_URL$ARCH"
+  curl -L -o /usr/local/bin/zexxo "$WINGS_DL_BASE_URL$ARCH"
 
-  chmod u+x /usr/local/bin/wings
+  chmod u+x /usr/local/bin/zexxo
 
   success "Pelican Wings downloaded successfully"
 }
@@ -126,7 +126,7 @@ ptdl_dl() {
 systemd_file() {
   output "Installing systemd service.."
 
-  curl -o /etc/systemd/system/wings.service "$GITHUB_URL"/configs/wings.service
+  curl -o /etc/systemd/system/zexxo.service "$GITHUB_URL"/configs/zexxo.service
   systemctl daemon-reload
   systemctl enable wings
 
